@@ -1,0 +1,20 @@
+# Carpeta de dependencias de Node.js
+/node_modules
+
+# Carpeta de archivos generados por Gulp
+/dist
+
+# Archivo de configuración de Gulp
+/gulpfile.js
+
+# Archivo de configuración de Sass
+/sass/config.rb
+
+# Archivos de caché de Sass
+/.sass-cache
+
+# Archivos de registro de errores de Sass
+/.sass-error.log
+
+# Archivos de registro de Gulp
+/gulp-debug.log
