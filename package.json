@@ -2,9 +2,10 @@
   "name": "music_fest",
   "version": "1.0.0",
   "description": "Festival Music Project",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "sass --watch src/scss:dist/css"
   },
   "keywords": [
     "sass",
@@ -13,5 +14,9 @@
   ],
   "author": "DiegoT4l",
   "license": "ISC",
-  "github": "https://github.com/DiegoT4l/Music-Festival-Project"
+  "github": "https://github.com/DiegoT4l/Music-Festival-Project",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "sass": "^1.77.8"
+  }
 }
