@@ -5,7 +5,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch src/scss:dist/css"
+    "dev": "gulp dev"
   },
   "keywords": [
     "sass",
@@ -17,6 +17,7 @@
   "github": "https://github.com/DiegoT4l/Music-Festival-Project",
   "devDependencies": {
     "gulp": "^5.0.0",
+    "gulp-sass": "^5.1.0",
     "sass": "^1.77.8"
   }
 }
