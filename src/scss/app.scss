@@ -1,10 +1,1 @@
-@use 'base/variables' as *;
-@use 'base/normalize';
-
-body {
-    font-family: $principal_font;
-    font-optical-sizing: auto;
-    font-style: normal;
-    color: $GREEN;
-}
-
+@forward 'base';
