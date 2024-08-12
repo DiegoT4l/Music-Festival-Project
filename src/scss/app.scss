@@ -1,4 +1,5 @@
 @use 'base/variables' as *;
+@use 'base/normalize';
 
 body {
     font-family: $principal_font;
