@@ -1,8 +1,30 @@
 @use 'base/variables' as *;
+@use 'base/mixins' as *;
 
 
 .header {
     background-color: $GREEN;
+
+    @include mobile {
+        color: $WHITE;
+        width: 1rem;
+        height: 0.1rem;
+    }
+    @include tablet {
+        color: $WHITE;
+        width: 1rem;
+        height: 0.1rem;
+    }
+    @include desktop {
+        color: $WHITE;
+        width: 1rem;
+        height: 0.1rem;
+    }
+    @include desktopXL {
+        color: $WHITE;
+        width: 1rem;
+        height: 0.1rem;
+    }
     .header-content {
         padding: 2rem;
         display: flex;
