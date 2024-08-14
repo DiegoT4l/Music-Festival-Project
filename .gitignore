@@ -18,3 +18,7 @@
 
 # Archivos de registro de Gulp
 /gulp-debug.log
+
+# Archivos de IDEs
+/.idea
+/.vscode

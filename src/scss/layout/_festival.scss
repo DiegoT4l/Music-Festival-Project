@@ -1,0 +1,22 @@
+@use 'base/variables' as *;
+@use 'base/mixins' as *;
+
+
+.festival-about {
+  @include container;
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+.festival-content {
+  margin-top: 5rem;
+  h2 {
+
+  }
+  .festival-date {
+    color: $GREEN;
+    font-weight: 700;
+  }
+}
