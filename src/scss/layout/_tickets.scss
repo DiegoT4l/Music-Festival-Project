@@ -1,0 +1,80 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+
+.tickets-container {
+  background-color: $GREEN;
+  h3 {
+    color: $WHITE;
+  }
+  .tickets {
+    @include container;
+    @include  tablet {
+      @include grid(2);
+    }
+  }
+}
+
+.pass {
+  transition: transform 0.25s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+  &-name {
+    font-size: 3.6rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    color: $WHITE;
+  }
+  &-header, &-footer {
+    padding: 0.5rem;
+    p {
+        text-align: center;
+        color: $WHITE;
+        margin: 0;
+    }
+  }
+  &-header {
+    background-color: $PINK;
+    p {
+      text-transform: uppercase;
+      font-size: 2.2rem;
+      padding: 1rem 0;
+    }
+  }
+  &-body {
+    background-color: $WHITE;
+    ul {
+        @include list-reset;
+        li {
+            padding: 2rem;
+            font-weight: 700;
+            border-bottom: 1px solid #e1e1e1;
+            &:last-child {
+            border-bottom: none;
+            }
+        }
+        span {
+            font-weight: 400;
+        }
+    }
+  }
+  &-footer {
+    background-color: $WHITE;
+    padding: 3rem;
+
+    p {
+      font-size: 2.8rem;
+      font-weight: 900;
+      background-color: $PURPLE;
+      padding: 1rem 0;
+      border-radius: 1rem;
+      cursor: pointer;
+      transition: background-color 0.25s ease-in-out;
+      &:hover {
+        background-color: darken($PURPLE, 15%);
+      }
+    }
+  }
+}
