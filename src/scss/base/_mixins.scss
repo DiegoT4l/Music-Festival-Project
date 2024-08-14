@@ -29,3 +29,15 @@
     max-width: 120rem;
     margin: 0 auto;
 }
+
+@mixin grid($columns: 1, $gap: 5rem) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: $gap;
+}
+
+@mixin list-reset {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}

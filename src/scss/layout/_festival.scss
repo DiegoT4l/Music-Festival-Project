@@ -1,13 +1,11 @@
-@use 'base/variables' as *;
-@use 'base/mixins' as *;
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
 
 
 .festival-about {
   @include container;
   @include tablet {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5rem;
+    @include grid(2, 5rem);
   }
 }
 .festival-content {
