@@ -17,6 +17,10 @@ body {
     font-style: normal;
     color: $BLACK;
     font-size: 2rem;
+
+    &.overflow-hidden {
+        overflow: hidden;
+    }
 }
 p {
     color: $BLACK;

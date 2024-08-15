@@ -1,0 +1,66 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+
+.gallery {
+  @include container;
+  &-images {
+    @include grid(1, 2rem);
+    @include mobile {
+      @include grid(2, 2rem);
+    }
+    @include tablet {
+      @include grid(3, 2rem);
+    }
+    @include desktop {
+      @include grid(4, 2rem);
+    }
+    img {
+      height: 20rem;
+      object-fit: cover;
+    }
+  }
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba($BLACK, 0.8);
+  display: grid;
+  place-items: center;
+  z-index: 100;
+  animation: fadeIn ease-in .25s;
+  &.fade-out {
+    animation: fadeOut ease-in .25s;
+  }
+  img {
+    background-color: $WHITE;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1rem rgba($BLACK, 0.2);
+    max-width: 90rem;
+  }
+  &-close {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: $WHITE;
+    border: none;
+    color: $BLACK;
+    display: grid;
+    place-items: center;
+    padding: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0 0 1rem rgba($BLACK, 0.2);
+    font-weight: 700;
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
