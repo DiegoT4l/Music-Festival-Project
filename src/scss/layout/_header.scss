@@ -63,7 +63,7 @@
         max-height: 100%;
         overflow: visible;
     }
-    &.active {
+    &.active-menu {
         max-height: 100%;
         overflow: visible;
     }
@@ -71,7 +71,7 @@
         color: $WHITE;
         font-size: 2.4rem;
 
-        &:hover {
+        &:hover, &.active-link {
             color: $YELLOW;
         }
     }
