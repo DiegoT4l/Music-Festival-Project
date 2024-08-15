@@ -1,4 +1,3 @@
-
 # Techno & EDM Festival
 
 ### Project Description
