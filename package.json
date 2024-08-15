@@ -17,6 +17,7 @@
   "github": "https://github.com/DiegoT4l/Music-Festival-Project",
   "devDependencies": {
     "gulp": "^5.0.0",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-plumber": "^1.2.1",
     "gulp-sass": "^5.1.0",
     "sass": "^1.77.8"
