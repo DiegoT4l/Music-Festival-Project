@@ -41,7 +41,7 @@ function createGallery() {
 
     for (let i = 1; i <= IMAGE_COUNT; i++) {
         const image = document.createElement('IMG');
-        image.src = `src/img/gallery/full/${i}.jpg`;
+        image.src = `/dist/assets/images/gallery/full/${i}.jpg`;
         image.alt = `Thumbnail ${i}`;
         image.classList.add('gallery-image');
 
@@ -55,7 +55,7 @@ function createGallery() {
 
 function openModal(imageIndex) {
     const image = document.createElement('IMG');
-    image.src = `src/img/gallery/full/${imageIndex}.jpg`;
+    image.src = `/dist/assets/images/gallery/full/${imageIndex}.jpg`;
     image.alt = `Image ${imageIndex}`;
     image.classList.add('modal-image');
 
