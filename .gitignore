@@ -3,8 +3,7 @@
 
 /dist
 
-# Archivo de configuración de Gulp
-/gulpfile.js
+
 
 # Archivo de configuración de Sass
 /sass/config.rb
