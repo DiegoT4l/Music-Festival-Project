@@ -18,6 +18,12 @@
     img {
       height: 20rem;
       object-fit: cover;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: transform 0.3s;
+      &:hover {
+        transform: scale(1.05);
+      }
     }
   }
 }

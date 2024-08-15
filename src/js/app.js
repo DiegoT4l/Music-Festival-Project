@@ -1,6 +1,36 @@
 document.addEventListener('DOMContentLoaded', function() {
     createGallery();
+    toggleMenu();
+    fixedNav();
 });
+
+function toggleMenu() {
+    const burger = document.querySelector('.burger');
+    const menuItems = document.querySelector('.principal-nav');
+    const menuLinks = document.querySelectorAll('.principal-nav a');
+
+    burger.addEventListener('click', function() {
+        menuItems.classList.toggle('active');
+    });
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            menuItems.classList.remove('active');
+        });
+    });
+}
+
+function fixedNav() {
+    const header = document.querySelector('.header');
+    const video = document.querySelector('.video');
+
+    window.addEventListener('scroll', function() {
+        if (video.getBoundingClientRect().bottom <= 0) {
+            header.classList.add('fixed');
+        } else {
+            header.classList.remove('fixed');
+        }
+    });
+}
 
 function createGallery() {
     const gallery = document.querySelector('.gallery-images');
