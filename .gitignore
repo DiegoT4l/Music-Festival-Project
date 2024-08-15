@@ -1,6 +1,8 @@
 # Carpeta de dependencias de Node.js
 /node_modules
 
+/dist
+
 # Archivo de configuración de Gulp
 /gulpfile.js
 
