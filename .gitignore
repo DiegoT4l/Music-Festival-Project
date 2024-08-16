@@ -3,7 +3,7 @@
 
 /dist
 
-package-lock.json
+package-lock.json/
 
 # Archivo de configuración de Sass
 /sass/config.rb
