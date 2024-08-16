@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     createGallery();
     toggleMenu();
     fixedNav();
@@ -12,11 +12,11 @@ function toggleMenu() {
     const menuItems = document.querySelector('.principal-nav');
     const menuLinks = document.querySelectorAll('.principal-nav a');
 
-    burger.addEventListener('click', function() {
+    burger.addEventListener('click', function () {
         menuItems.classList.toggle('active-menu');
     });
     menuLinks.forEach(link => {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', function () {
             menuItems.classList.remove('active-menu');
         });
     });
@@ -26,7 +26,7 @@ function fixedNav() {
     const header = document.querySelector('.header');
     const video = document.querySelector('.video');
 
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         if (video.getBoundingClientRect().bottom <= 0) {
             header.classList.add('fixed');
         } else {
@@ -40,12 +40,15 @@ function createGallery() {
     const IMAGE_COUNT = 16;
 
     for (let i = 1; i <= IMAGE_COUNT; i++) {
-        const image = document.createElement('IMG');
-        image.src = `/dist/assets/images/gallery/full/${i}.jpg`;
-        image.alt = `Thumbnail ${i}`;
-        image.classList.add('gallery-image');
+        const image = document.createElement('PICTURE');
+        image.innerHTML = `
+            <source srcset="src/img/gallery/thumb/${i}.avif" type="image/avif">
+            <source srcset="src/img/gallery/thumb/${i}.webp" type="image/webp">
+            <img loading="lazy" width="200" height="300" src="src/img/gallery/thumb/${i}.jpg" alt="imagen galeria">
+        `;
 
-        image.addEventListener('click', function() {
+
+        image.addEventListener('click', function () {
             openModal(i);
         });
 
@@ -54,10 +57,12 @@ function createGallery() {
 }
 
 function openModal(imageIndex) {
-    const image = document.createElement('IMG');
-    image.src = `/dist/assets/images/gallery/full/${imageIndex}.jpg`;
-    image.alt = `Image ${imageIndex}`;
-    image.classList.add('modal-image');
+    const image = document.createElement('PICTURE');
+    image.innerHTML = `
+        <source srcset="src/img/gallery/full/${imageIndex}.avif" type="image/avif">
+        <source srcset="src/img/gallery/full/${imageIndex}.webp" type="image/webp">
+        <img loading="lazy" width="200" height="300" src="src/img/gallery/full/${imageIndex}.jpg" alt="imagen galeria">
+    `;
 
     const modal = document.createElement('DIV');
     modal.classList.add('modal');
@@ -86,7 +91,7 @@ function closeModal() {
 }
 
 function highlightNav() {
-    document.addEventListener('scroll', function() {
+    document.addEventListener('scroll', function () {
         const sections = document.querySelectorAll('section');
         const navLinks = document.querySelectorAll('.principal-nav a');
 
@@ -113,7 +118,7 @@ function scrollNav() {
     const links = document.querySelectorAll('.principal-nav a');
 
     links.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             e.preventDefault();
             const section = document.querySelector(e.target.getAttribute('href'));
             section.scrollIntoView({

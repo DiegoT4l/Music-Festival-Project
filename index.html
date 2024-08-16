@@ -34,7 +34,7 @@
                 <p>Julio 2026, CDMX, México</p>
             </div>
         </div>
-        <video autoplay muted loop>
+        <video preload="auto" autoplay muted loop>
             <source src="/video/dj.mp4" type="video/mp4">
             <source src="/video/dj.ogv" type="video/ogg">
             <source src="/video/dj.webm" type="video/webm">
@@ -43,7 +43,11 @@
 
     <section class="festival-about">
         <div class="festival-image">
-            <img src="./src/img/imagen_dj.jpg" alt="Festival Dj image" />
+            <picture>
+                <source srcset="./src/img/imagen_dj.avif" type="image/avif">
+                <source srcset="./src/img/imagen_dj.webp" type="image/webp">
+                <img width="800" height="533" loading="lazy" src="./src/img/imagen_dj.jpg" alt="Festival Dj image" />
+            </picture>
         </div>
         <div class="festival-content">
             <h2>Techno & EDM Festival</h2>
