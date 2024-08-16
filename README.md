@@ -1,5 +1,6 @@
 
 # Techno & EDM Festival
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f04d76ce-b2e2-4f99-925f-8540a3d1a20a/deploy-status)](https://app.netlify.com/sites/fest-music-t4l/deploys)
 
 ### Project Description
 This project involves the creation of a website that simulates the official platform for a techno music festival called "Techno & EDM Festival." The page was developed as part of a Udemy course taught by Professor Juan de la Torre Valdez.
